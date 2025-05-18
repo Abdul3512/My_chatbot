@@ -1,19 +1,10 @@
 import os
 import json
 import random
-import ssl
 import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import re
-
-# SSL and NLTK setup
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_default_https_context = _create_unverified_https_context
 
 # Load intents from a JSON file
 with open("intents.json", "r") as file:
