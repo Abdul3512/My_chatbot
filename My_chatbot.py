@@ -22,8 +22,8 @@ with open("intents.json", "r") as file:
 tags = []
 patterns = []
 
-for intent in intents:
-    for pattern in intent['patterns']:
+for intent in intents["intents"]:
+    for pattern in intent["patterns"]:
         tags.append(intent['tag'])
         patterns.append(pattern)
 
@@ -51,7 +51,7 @@ def chatbot_ml(input_text):
 # Chatbot function using simple pattern matching (fallback)
 def chatbot_pattern(user_input):
     user_tokens = word_tokenize(user_input.lower())
-    for intent in intents:
+    for intent in intents["intents"]:
         for pattern in intent['patterns']:
             pattern_tokens = word_tokenize(pattern.lower())
             if set(pattern_tokens).intersection(user_tokens):
