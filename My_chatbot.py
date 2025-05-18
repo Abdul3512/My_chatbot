@@ -40,15 +40,15 @@ def chatbot_ml(input_text):
             return random.choice(intent["responses"])
     return "I'm not sure how to respond to that."
 
-# Chatbot function using simple pattern matching (fallback)
+# Pattern-matching chatbot function (fallback)
 def chatbot_pattern(user_input):
-    user_tokens = re.findall(r"\w+", user_input.lower())
+    user_tokens = re.findall(r"\w+", user_input.lower())  # NO NLTK
     for intent in intents["intents"]:
         for pattern in intent['patterns']:
             pattern_tokens = re.findall(r"\w+", pattern.lower())
             if set(pattern_tokens).intersection(user_tokens):
                 return random.choice(intent['responses'])
-    return chatbot_ml(user_input)  # fallback to ML if no pattern match
+    return chatbot_ml(user_input)
 
 # Streamlit UI
 def main():
@@ -62,7 +62,6 @@ def main():
         st.session_state.chat_history.append(("user", user_input))
         st.session_state.chat_history.append(("bot", response))
 
-    # Display chat history
     for speaker, message in st.session_state.chat_history:
         if speaker == "user":
             st.markdown(f"**You:** {message}")
