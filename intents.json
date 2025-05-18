@@ -6,15 +6,14 @@
         "Hi",
         "Hello",
         "Hey",
-        "How are you",
-        "What's up"
+        "How are you?",
+        "What's up?"
       ],
       "responses": [
         "Hi there!",
         "Hello!",
         "Hey!",
-        "I'm fine, thanks!",
-        "Not much, you?"
+        "I'm fine, thanks!"
       ]
     },
     {
@@ -23,15 +22,13 @@
         "Bye",
         "See you",
         "Goodbye",
-        "Catch you later",
-        "Talk to you soon"
+        "Catch you later"
       ],
       "responses": [
         "Goodbye!",
         "See you later!",
         "Take care!",
-        "Bye for now!",
-        "Talk to you soon!"
+        "Bye for now!"
       ]
     },
     {
@@ -40,196 +37,13 @@
         "Thanks",
         "Thank you",
         "Appreciate it",
-        "Thanks a lot",
         "Much appreciated"
       ],
       "responses": [
         "You're welcome!",
         "Glad to help!",
         "Anytime!",
-        "No problem!",
-        "Happy to help!"
-      ]
-    },
-    {
-      "tag": "name",
-      "patterns": [
-        "What's your name?",
-        "Who are you?",
-        "Tell me your name"
-      ],
-      "responses": [
-        "I'm your virtual assistant!",
-        "I'm a chatbot here to help you.",
-        "You can call me ChatBot."
-      ]
-    },
-    {
-      "tag": "help",
-      "patterns": [
-        "Can you help me?",
-        "I need assistance",
-        "Help me please",
-        "Need help"
-      ],
-      "responses": [
-        "Sure, what do you need help with?",
-        "I'm here to assist you.",
-        "How can I help you today?"
-      ]
-    },
-    {
-      "tag": "age",
-      "patterns": [
-        "How old are you?",
-        "What's your age?",
-        "When were you created?"
-      ],
-      "responses": [
-        "I'm always up to date!",
-        "Age is just a number for a bot like me.",
-        "I exist in the digital realm, ageless!"
-      ]
-    },
-    {
-      "tag": "creator",
-      "patterns": [
-        "Who made you?",
-        "Who is your creator?",
-        "Where were you built?"
-      ],
-      "responses": [
-        "I was created by OpenAI.",
-        "The brilliant minds at OpenAI made me!",
-        "I'm a product of artificial intelligence research."
-      ]
-    },
-    {
-      "tag": "weather",
-      "patterns": [
-        "What's the weather like?",
-        "Tell me today's weather",
-        "Is it raining?"
-      ],
-      "responses": [
-        "I'm not connected to live weather data, but I recommend checking a weather app!",
-        "Sorry, I can\u2019t fetch real-time weather yet."
-      ]
-    },
-    {
-      "tag": "joke",
-      "patterns": [
-        "Tell me a joke",
-        "Make me laugh",
-        "Do you know any jokes?"
-      ],
-      "responses": [
-        "Why did the computer show up at work late? It had a hard drive!",
-        "I would tell you a joke about UDP, but you might not get it."
-      ]
-    },
-    {
-      "tag": "feeling",
-      "patterns": [
-        "How do you feel?",
-        "Are you happy?",
-        "What's your mood?"
-      ],
-      "responses": [
-        "I'm just code, but I'm feeling helpful!",
-        "I'm always ready to assist!",
-        "Feeling like assisting today!"
-      ]
-    },
-    {
-      "tag": "hobby",
-      "patterns": [
-        "Do you have hobbies?",
-        "What do you like to do?",
-        "What are your interests?"
-      ],
-      "responses": [
-        "I like chatting with people like you!",
-        "Helping others is my favorite thing to do.",
-        "Answering questions is what I do best."
-      ]
-    },
-    {
-      "tag": "favorite_sport",
-      "patterns": [
-        "What's your favorite sport?",
-        "Do you like sports?",
-        "Which sport do you prefer?"
-      ],
-      "responses": [
-        "I enjoy talking about all sports!",
-        "Hard to choose \u2014 I like football, basketball, and more!",
-        "Every sport is exciting in its own way."
-      ]
-    },
-    {
-      "tag": "football_rules",
-      "patterns": [
-        "What are the basic rules of football?",
-        "How do you play football?",
-        "Tell me about football rules"
-      ],
-      "responses": [
-        "Football is played with two teams of 11 players aiming to score goals.",
-        "The objective is to score more goals than the opponent.",
-        "Players can't use their hands except for the goalkeeper."
-      ]
-    },
-    {
-      "tag": "cricket_overs",
-      "patterns": [
-        "How many overs are there in a cricket match?",
-        "What is an over in cricket?",
-        "Explain cricket overs"
-      ],
-      "responses": [
-        "In ODI, there are 50 overs per side. In T20, it's 20.",
-        "An over consists of six legal deliveries.",
-        "The number of overs varies by format."
-      ]
-    },
-    {
-      "tag": "tennis_score",
-      "patterns": [
-        "How is tennis scored?",
-        "Explain tennis scoring",
-        "What does love mean in tennis?"
-      ],
-      "responses": [
-        "Tennis uses points: 15, 30, 40, then game.",
-        "'Love' means zero in tennis.",
-        "Players must win by two clear points."
-      ]
-    },
-    {
-      "tag": "basketball_teams",
-      "patterns": [
-        "Name some famous basketball teams",
-        "Who are top NBA teams?",
-        "Tell me popular basketball teams"
-      ],
-      "responses": [
-        "Teams like the Lakers, Warriors, and Celtics are well known.",
-        "The Chicago Bulls, Miami Heat, and Brooklyn Nets are popular.",
-        "The NBA has many iconic teams."
-      ]
-    },
-    {
-      "tag": "olympics_info",
-      "patterns": [
-        "What are the Olympics?",
-        "Tell me about the Olympic Games",
-        "When are the Olympics held?"
-      ],
-      "responses": [
-        "The Olympics are an international sports event held every four years.",
-        "Both Summer and Winter Olympics take place every four years.",
-        "They feature athletes from around the world."
+        "No problem!"
       ]
     },
     {
@@ -240,49 +54,21 @@
         "Any sports updates?"
       ],
       "responses": [
-        "The 2024 Paris Olympics are coming soon!",
-        "Real Madrid won La Liga recently.",
-        "The NBA playoffs are heating up!",
-        "Manchester City is on a winning streak."
+        "Manchester City just secured another Premier League title!",
+        "The NBA playoffs are heating up with some intense matchups!",
+        "Novak Djokovic won another Grand Slam title recently.",
+        "Real Madrid has advanced to the Champions League final.",
+        "The IPL finals are scheduled for next weekend!"
       ]
     },
     {
-      "tag": "famous_athletes",
+      "tag": "football_rules",
       "patterns": [
-        "Who are some famous athletes?",
-        "Tell me about top sports players",
-        "Famous sportspeople?"
+        "What are the rules of football?",
+        "Explain football rules"
       ],
       "responses": [
-        "Athletes like Lionel Messi, Serena Williams, and Usain Bolt are legends.",
-        "LeBron James, Roger Federer, and Virat Kohli are also well known.",
-        "There are many stars across different sports."
-      ]
-    },
-    {
-      "tag": "sports_hobby",
-      "patterns": [
-        "Is playing sports a good hobby?",
-        "Should I take up sports?",
-        "Why play sports?"
-      ],
-      "responses": [
-        "Absolutely! Sports help with fitness and fun.",
-        "They're a great way to stay active and meet people.",
-        "Yes, sports build discipline and teamwork."
-      ]
-    },
-    {
-      "tag": "world_cup",
-      "patterns": [
-        "What is the World Cup?",
-        "Tell me about the FIFA World Cup",
-        "When is the next World Cup?"
-      ],
-      "responses": [
-        "The FIFA World Cup is a major international football tournament.",
-        "It's held every four years with teams from all over the world.",
-        "It's the most watched sporting event globally."
+        "Football is played by two teams aiming to score goals. Players cannot use hands, except the goalkeeper."
       ]
     }
   ]
