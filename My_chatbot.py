@@ -2,11 +2,10 @@ import os
 import json
 import random
 import ssl
-import nltk
 import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from nltk.tokenize import word_tokenize
+import re
 
 # SSL and NLTK setup
 try:
@@ -15,16 +14,6 @@ except AttributeError:
     pass
 else:
     ssl._create_default_https_context = _create_unverified_https_context
-
-# Define a custom path for NLTK data
-nltk_data_path = os.path.join(os.path.dirname(__file__), "nltk_data")
-os.makedirs(nltk_data_path, exist_ok=True)
-
-# Point NLTK to this custom data path
-nltk.data.path.append(nltk_data_path)
-
-# Download the punkt tokenizer to the specified directory
-nltk.download("punkt", download_dir=nltk_data_path)
 
 # Load intents from a JSON file
 with open("intents.json", "r") as file:
@@ -55,17 +44,17 @@ if "chat_history" not in st.session_state:
 def chatbot_ml(input_text):
     vec = vectorizer.transform([input_text])
     tag = clf.predict(vec)[0]
-    for intent in intents:
-        if intent['tag'] == tag:
-            return random.choice(intent['responses'])
+    for intent in intents["intents"]:
+        if intent["tag"] == tag:
+            return random.choice(intent["responses"])
     return "I'm not sure how to respond to that."
 
 # Chatbot function using simple pattern matching (fallback)
 def chatbot_pattern(user_input):
-    user_tokens = word_tokenize(user_input.lower())
+    user_tokens = re.findall(r"\w+", user_input.lower())
     for intent in intents["intents"]:
         for pattern in intent['patterns']:
-            pattern_tokens = word_tokenize(pattern.lower())
+            pattern_tokens = re.findall(r"\w+", pattern.lower())
             if set(pattern_tokens).intersection(user_tokens):
                 return random.choice(intent['responses'])
     return chatbot_ml(user_input)  # fallback to ML if no pattern match
