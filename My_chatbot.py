@@ -9,10 +9,22 @@ from sklearn.linear_model import LogisticRegression
 from nltk.tokenize import word_tokenize
 
 # SSL and NLTK setup
-ssl._create_default_https_context = ssl._create_unverified_context
-nltk_data_path = os.path.abspath("nltk_data")
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+# Define a custom path for NLTK data
+nltk_data_path = os.path.join(os.path.dirname(__file__), "nltk_data")
+os.makedirs(nltk_data_path, exist_ok=True)
+
+# Point NLTK to this custom data path
 nltk.data.path.append(nltk_data_path)
-nltk.download('punkt', download_dir=nltk_data_path)
+
+# Download the punkt tokenizer to the specified directory
+nltk.download("punkt", download_dir=nltk_data_path)
 
 # Load intents from a JSON file
 with open("intents.json", "r") as file:
